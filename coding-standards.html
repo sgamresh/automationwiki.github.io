@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+  <meta name="author" content="GeeksLabs">
+  <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+  <link rel="shortcut icon" href="img/favicon.png">
+
+  <title>Coding Standards | Automation Wiki</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- bootstrap theme -->
+  <link href="css/bootstrap-theme.css" rel="stylesheet">
+  <!--external css-->
+  <!-- font icon -->
+  <link href="css/elegant-icons-style.css" rel="stylesheet" />
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-responsive.css" rel="stylesheet" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+      <script src="js/lte-ie7.js"></script>
+    <![endif]-->
+
+    <!-- =======================================================
+      Theme Name: NiceAdmin
+      Theme URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+      Author: BootstrapMade
+      Author URL: https://bootstrapmade.com
+    ======================================================= -->
+</head>
+
+<body>
+  <!-- container section start -->
+  <section id="container" class="">
+    <!--header start-->
+
+    <header class="header dark-bg">
+      <div class="toggle-nav">
+        <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+      </div>
+
+      <!--logo start-->
+      <a href="index.html" class="logo">Automation <span class="lite">Wiki</span></a>
+      <!--logo end-->
+
+      <div class="nav search-row" id="top_menu">
+        <!--  search form start -->
+        <ul class="nav top-menu">
+ 
+		        <!--  Anything to add in top navigation menu-->
+ 
+        </ul>
+        <!--  search form end -->
+      </div>
+
+      <div class="top-nav notification-row">
+       
+      </div>
+    </header>
+    <!--header end-->
+
+    <!--sidebar start-->
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu">
+          <li class="">
+            <a class="" href="index.html">
+                          <i class="icon_house_alt"></i>
+                          <span>Dashboard</span>
+                      </a>
+          </li>
+		  
+		  
+		  
+      
+          <!--*********************************************************************************-->
+      
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_document_alt"></i>
+                          <span>ViaCom18</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+			<li><a class="" href="viacom18-manual.html">Manual</a></li>
+              <li><a class="" href="voot-web-pwa.html">Voot Web/Pwa</a></li>
+              <li><a class="" href="voot-app.html">Voot App</a></li>
+			  <li><a class="" href="voot-kids.html">Voot Kids</a></li>
+			  <li><a class="" href="voot-android-tv.html">Voot Android TV/ AFTV</a></li>
+            </ul>
+          </li>
+		  
+
+    
+		 
+		  <li class="sub-menu">
+            <a class="" href="javascript:;" >
+                          <i class="icon_genius"></i>
+                          <span>Documentation</span>
+						   <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+					  
+					  
+					   <ul class="sub">
+              <li><a class="" href="appium.html">Appium</a></li>
+            </ul>
+          </li>
+          
+		     <li class="active">
+            <a class="" href="coding-standards.html">
+                          <i class="icon_genius"></i>
+                          <span>Coding Standards</span>
+                      </a>
+          </li>
+		  
+		  <li>
+            <a class="" href="contact-us.html">
+                          <i class="icon_piechart"></i>
+                          <span>Contact Us</span>
+                      </a>
+          </li>
+
+ <!--*********************************************************************************-->
+
+        
+          </li>
+
+        </ul>
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
+    <!--sidebar end-->
+
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper">
+        <div class="row">
+          <div class="col-lg-12">
+            <h3 class="page-header"><i class="fa fa fa-bars"></i>Coding-Standards</h3>
+            <ol class="breadcrumb">
+              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="icon_documents_alt"></i>Coding-Standards</li>
+            </ol>
+          </div>
+        </div>
+        <!-- page start-->
+         <div>
+            <section class="panel">
+              
+              <table class="table">
+         
+                <tbody>
+                  <tr class="success">
+                    <td></td>
+                    <td>Overview</td>
+               
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>Coding Guidelines to be followed for development of software and following sections describe the approach to be followed for Java Projects in general and specific to Test Automation.</br>
+It helps readability of the code to understand the functionality and logic, it helps get consistency
+across project in reviewing the code and most importantly it helps to maintain and do rework easily.
+This document shall be used as reference for Voot Test Automation while programming and as
+checklist for code review process.</td>
+                   
+                  </tr>
+                  <tr class="success">
+                    <td></td>
+                    <td>Naming conventions</td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>In General, check if the name of a variable, method, class truly covers the subject. </td>
+                  
+                  </tr>
+				  
+				  
+				  
+				   </tr>
+                  <tr class="success">
+                    <td></td>
+                    <td>File name</td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>The source file name consists of the case-sensitive name of the top-level class it contains plus the  .java extension. </td>
+                  
+                  </tr>
+				  
+				  
+				   </tr>
+                  <tr class="success">
+                    <td></td>
+                    <td>Package Name</td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>Package names should be in all lower cases that start with reversed Internet domain name followed  by application name. For example, org/companyname/appname </td>
+                  
+                  </tr>
+				  
+				  
+				  
+				  
+				  
+				  
+				     </tr>
+                  <tr class="success">
+                    <td></td>
+                    <td>Class names </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>Upper camel case should be used for the class names. Class name should be a noun. Try to make the  name simple and descriptive. 
+LoginTest.java : All the tests shall have suffix Test 
+LoginPage.java : All the pages shall have suffix Page 
+TestBase.java : Class to include all common methods to be used by tests and pages </td>
+                  
+                  </tr>
+				  
+				  
+				     </tr>
+                  <tr class="success">
+                    <td></td>
+                    <td>Method names </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>Lower camel case should be used for the method names. Method name should be a verb. Try to  make the name simple and descriptive. Use whole word instead of abbreviations. 
+initialiseBrowsers() 
+initialiseProperties() 
+waitForTextToBePresent(WebElement webElement, String textToBeVerified) testLoginwithValidCredentials() :All test methods shall start with prefix test 
+</td>
+                  
+                  </tr>
+				  
+				     </tr>
+                  <tr class="success">
+                    <td></td>
+                    <td>Variable names </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>Lower camel case should be used for the variable names. Intent of the variable shall be indicated  with the given name. The variable name should be a noun. Try to make the name simple and  descriptive. Try to avoid abbreviations, prefer domainCode over dmnCd
+					
+					webDriver  
+intEmployeeCount 
+
+
+					</td>
+                  
+                  </tr>
+				  
+				     </tr>
+                  <tr class="success">
+                    <td></td>
+                    <td>Constants </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>All letters should be in uppercase. Words shall be separated with underscore _ . Create a constant file for static values that are needed at multiple places 
+Use Database-driven values for dynamic values 
+Use ENUMs for a group of constants 
+BASE_URL 
+All the global constants shall be defined in a property file and loaded into the constants defined in  Constant class. 
+Constants shall be defined as public static in the Constant class 
+public static String BASE_URL; 
+</td>
+                  
+                  </tr>
+				  
+				     </tr>
+                  <tr class="success">
+                    <td></td>
+                    <td>Programming guidelines </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>∙ Optimize Imports 
+Always optimize imports in the Java class. 
+</td>
+                  
+                  </tr>
+				  
+				  
+				   </tr>
+                  <tr class="success">
+                    <td></td>
+                    <td>∙ Null Checks 
+</td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>As a general practice, always do a null check on a variable before any operation. </td>
+					
+					
+					
+				   </tr>
+                  <tr class="success">
+                    <td></td>
+                    <td>Exception Handling </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>The try-catch block should be used for exception handling with proper logging in the catch  block. Also, make sure to close the resources properly in the finally block. 
+</td>
+				  
+				   </tr>
+                  <tr class="success">
+                    <td></td>
+                    <td>Code Indentation and Formatting </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>For a cleaner and readable code, use code indentation thoroughly (with Tab or Spaces).  Each time a new block or block-like construct is opened, the indent increases by two spaces.  When the block ends, the indent returns to the previous indent level. The indent level  applies to both code and comments throughout the block. It can be done automatically with  the built-in editor of the IDE. For instance, use Ctrl-Shift-F in Eclipse. </td>
+                  
+                  </tr>
+				  
+				    </tr>
+                  <tr class="success">
+                    <td></td>
+                    <td>Programming guidelines </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>data</td>
+                  
+                  </tr>
+				  
+				  
+				   </tr>
+                  <tr class="success">
+                    <td></td>
+                    <td>Not All One-Liners </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>It's good to keep the code clean and readable. So, it's a better idea to not always go with  one-liners. Especially, when we initialize and operate the variable in one line.
+					For example, write: 
+out.write(attrs.get("offset") + "-" + Math.min(attrs.get("count"), attrs.get("offset") +  attrs.get("max")) + " " + title + " " + attrs.get("count")); 
+as: 
+int start = attrs.get("offset") 
+int total = attrs.get("count")) 
+int end = Math.min(total, start + attrs.get("max")) 
+out.write(start + "-" + end + " " + title + " " + total) 
+
+					
+					</td>
+					
+					
+					
+				   </tr>
+                  <tr class="success">
+                    <td></td>
+                    <td>White-Spaces</td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>Use white-spaces to separate combined statements to make code more readable. For example, write: 
+Integer.valueOf(params.offset?params.offset:attrs.offset) 
+as: 
+Integer.valueOf(params.offset ? params.offset : attrs.offset) 
+</td>
+				  
+				   </tr>
+				   
+				   
+				   
+				    <tr class="success">
+                    <td></td>
+                    <td>Curly Braces </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>Use curly braces for one-liners also. Braces to be used with if, else, for, do and while statements,  even when the body is empty or contains only a single statement. 
+</td>
+                  
+                  </tr>
+				  
+				  
+				   <tr class="success">
+                    <td></td>
+                    <td>One statement per line  </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>Each statement is followed by a line break. 
+</td>
+                  
+                  </tr>
+				  
+				  <tr class="success">
+                    <td></td>
+                    <td>∙ Line-wrapping  </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>When code that might otherwise legally occupy a single line is divided into multiple lines, this  activity is called line-wrapping. Very often there are several valid ways to line-wrap the same  piece of code. While the typical reason for line-wrapping is to avoid overflowing the column  limit, even code that would in fact fit within the column limit may be line-wrapped as required.  Extracting a method or local variable may solve the problem without the need to line-wrap. </td>
+                  
+                  </tr>
+				  
+				  <tr class="success">
+                    <td></td>
+                    <td>Variable declarations  </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>One variable per declaration. Every variable declaration (field or local) declares only one  variable: declarations such as int a, b; are not used.  
+Exception: Multiple variable declarations are acceptable in the header of a for loop
+</td>
+                  
+                  </tr>
+				  
+				  
+				  <tr class="success">
+                    <td></td>
+                    <td>Declared when needed</td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>Local variables are not habitually declared at the start of their containing block or block-like  construct. Instead, local variables are declared close to the point they are first used (within  reason), to minimize their scope. Local variable declarations typically have initializers, or are  initialized immediately after declaration. 
+</td>
+                  
+                  </tr>
+				  
+				  <tr class="success">
+                    <td></td>
+                    <td>No C-style array declarations </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>The square brackets form a part of the type, not the variable: String[] args, not String args[].</td>
+                  
+                  </tr>
+				  
+				  <tr class="success">
+                    <td></td>
+                    <td>StringBuilder or StringBuffer in Place of String</td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>When performing a lot of operations on the String, use StringBuilder or StringBuffer 
+For example, Java creates a new String object for every concatenation operation. In this case, a  better idea is to use a StringBuffer. 
+Use equals over == 
+equals perform the actual comparison of two strings, whereas == compares object references. ∙ switch-case Over Multiple if-else 
+It's a good practice to use switch-case in place of multiple if-else conditions. It optimizes the  code execution and also makes code cleaner and more readable. 
+</td>
+                  
+                  </tr>
+				  
+				  <tr class="success">
+                    <td></td>
+                    <td>Objects Creation in a Loop </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>It is usually better to create the object inside the loop (If object is not required outside loop).  Java optimizes memory usage for short-lived objects. 
+For example, write: 
+Person person; 
+for(int i=0;i<namesList.size();i++) { 
+ person = new Person(); 
+ person.setName(namesList.get(i)); 
+ person.display(); 
+} 
+as: 
+for(int i=0;i<namesList.size();i++) { 
+ Person person = new Person(); 
+ person.setName(namesList.get(i)); 
+ person.display(); 
+}
+pg. 6 
+Voot Test Automation – Coding Guidelines 
+Also, create a new object only if required. 
+For example, write: 
+ArrayList<Person> personList = new ArrayList<Person>(); 
+for(int i=0;i<namesList.size();i++) { 
+ Person person = new Person(); 
+ if(null != namesList.get(i)) { 
+ person.setName(namesList.get(i)); 
+ personList.add(person); 
+ } 
+} 
+as: 
+ArrayList<Person> personList = new ArrayList<Person>(); 
+for(int i=0;i<namesList.size();i++) { 
+ if(null != namesList.get(i)) { 
+ Person person = new Person(); 
+ person.setName(namesList.get(i)); 
+ personList.add(person); 
+ } 
+} 
+</td>
+                  
+                  </tr>
+				  
+				  
+				  
+                  <tr class="success">
+                    <td></td>
+                    <td>Follow Page Object Designer Pattern </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>Page Objects should never make verification or assertions, but there is a single verification which can  and should be within the page object. This verification mission is to verify the page, if critical  elements on the page were loaded correctly, a good way to do so is checking it in the constructor of  the page object. A page object does not necessarily need to represent an entire page, it could be  used to represent components on a page. </td>
+                  
+                  </tr>
+				  
+				  
+				   <tr class="success">
+                    <td></td>
+                    <td>Waits </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>Usage of Implicit Waits, Explicit Waits and Sleeps should be optimal in the project. For example a 10  seconds wait at 12 places in a class, across 60 different classes can add 2 hours to the execution  time. </td>
+                  
+                  </tr>
+				  
+				  <tr class="success">
+                    <td></td>
+                    <td>Locators Strategy</td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>While Xpath is convenient to find any element in the DOM, it is considered as least preferred  approach with respect to performance. In iOS platform, Xpath should be avoided to the extent  possible. 
+Refer to below documents for guidelines. 
+http://appium.io/docs/en/commands/element/find-elements/index.html#selector-strategies https://appiumpro.com/editions/60-how-to-pick-the-right-locator-strategy 
+https://appiumpro.com/editions/8-how-to-find-elements-in-ios-not-by-xpath </td>
+                  
+                  </tr>
+				  
+				  <tr class="success">
+                    <td></td>
+                    <td>Comments </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>Comments shall be used to explain the code to make the test scripts more readable for others.  Always put comments defining the purpose. 
+Use consistent commenting styles. 
+Block comment style 
+Block comments are indented at the same level as the surrounding code. They may be in /* ... */  style or // ... style. For multi-line /* ... */ comments, subsequent lines must start with * aligned with  the * on the previous line. 
+/* 
+* This is // And so /* Or you can 
+* okay. // is this. * even do this. */ 
+*/
+
+
+
+Comments are not enclosed in boxes drawn with asterisks or other characters. 
+When writing multi-line comments, use the /* ... */ style if you want automatic code formatters to re wrap the lines when necessary (paragraph-style). Most formatters don't re-wrap lines in // ... style  comment blocks. 
+For example, Javadoc on a class: 
+/** 
+* General convenience tags for layout - header, body and footer 
+* @author – Name 
+* @dateCreated - Date 
+*/ 
+class LayoutTagLib { 
+} 
+Javadoc on a method: 
+/**
+pg. 8 
+Voot Test Automation – Coding Guidelines 
+* Gets the user for specified code and role. 
+* @param code :- The code, either username or email address 
+* @param role :- The role identification e.g. A, B or C. Default is A. 
+* @return the user or null if not found 
+*/ 
+User findUser(String code, String role = "A") 
+Make sure the code is self-explanatory and comments are really useful in very specific cases. 
+</td>
+                  
+                  </tr>
+				  
+				  
+				  <tr class="success">
+                    <td></td>
+                    <td>TestNG Annotations</td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>Structure the Test methods for flexible suite run options by using annotations with required tags like @Test, @enabled=true, @groupname, @priority etc as decided by the project. 
+Ensure @Before and @After methods are consistently followed at Suite Level, Class Level and  Method Level 
+</td>
+                  
+                  </tr>
+				  
+				  <tr class="success">
+                    <td></td>
+                    <td>Code Clean Up</td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>Remove console print Statements (SOPs), use logging instead (never log personal information) Remove obsolete comments 
+Use the @deprecated annotation on the method/variable, if it is not meant for future use or going  to be removed 
+Remove hardcoded variable values 
+</td>
+                  
+                  </tr>
+				  
+				  <tr class="success">
+                    <td></td>
+                    <td>Business Logic and reusability  </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>Avoid redundant code by using reusable components like utilities and service methods. 
+</td>
+                  
+                  </tr>
+				  
+				  <tr class="success">
+                    <td></td>
+                    <td>Code Commit  </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>Group the files and commit together for a logical set of changes. 
+Don't commit the code which has the actual Password. Make sure to use a system/configuration  variable to replace the password 
+Commit messages should contain the task information. For example, JIRA issue number, a  meaningful comment on code implementation 
+Commit .class files (from the build, out, target directories), only if required 
+</td>
+                  
+                  </tr>
+				  
+				   <tr class="success">
+                    <td></td>
+                    <td>Code Review and Comments.  </td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td>Source code maintained at GitHub as private repository. To ensure that, comments are added for  the code change that is being pushed. Comments are required for Reviewers to understand the  purpose of change. 
+Discuss with leads for any change in common Utilities Classes. Requires approval from leads to push  any changes in Utilities. 
+Before start of the day, to take the latest code from GitHub. Need to Merge the Code as soon as  possible after getting approvals else it might result in conflicts. 
+pg. 9 
+Voot Test Automation – Coding Guidelines 
+Always save all files before pushing the code. Don’t push the Constant file and those changes that are local to developers system. 
+Don’t push the code, even if there is a single error in the project. 
+In case of conflicts, resolve and create a pull request again. 
+</td>
+                  
+                  </tr>
+				  
+				   <tr class="success">
+                    <td></td>
+                    <td>Technical Lead or Module Leads approving pull requests,</td>
+               
+			    
+			     
+                  </tr>
+                  <tr class="active">
+                    <td></td>
+                    <td> to ensure coding guidelines are followed.  Reviewers to record any observation and gaps to the coding guidelines and to get it reworked from  developers, before approving pull request and merging the change set. 
+Keep It Simple! Maintain simplicity and readability of code. 
+Reference is available at https://google.github.io/styleguide/javaguide.html</td>
+                  
+                  </tr>
+				  
+				  
+				  
+				  
+                </tbody>
+              </table>
+            </section>
+          </div>
+        <!-- page end-->
+      </section>
+    </section>
+    <!--main content end-->
+    <div class="text-right">
+      <div class="credits">
+          <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
+          -->
+          Designed by <a href="https://sgamresh.github.io/">Amresh Pradhan</a>
+        </div>
+    </div>
+  </section>
+  <!-- container section end -->
+  <!-- javascripts -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- nice scroll -->
+  <script src="js/jquery.scrollTo.min.js"></script>
+  <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+  <!--custome script for all page-->
+  <script src="js/scripts.js"></script>
+
+
+</body>
+
+</html>
