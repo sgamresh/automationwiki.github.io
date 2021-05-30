@@ -153,612 +153,512 @@
          <div>
             <section class="panel">
               
-              <table class="table">
-         
-                <tbody>
-                  <tr class="success">
-                    <td></td>
-                    <td>Overview</td>
-               
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>Coding Guidelines to be followed for development of software and following sections describe the approach to be followed for Java Projects in general and specific to Test Automation.</br>
-It helps readability of the code to understand the functionality and logic, it helps get consistency
-across project in reviewing the code and most importantly it helps to maintain and do rework easily.
-This document shall be used as reference for Voot Test Automation while programming and as
-checklist for code review process.</td>
-                   
-                  </tr>
-                  <tr class="success">
-                    <td></td>
-                    <td>Naming conventions</td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>In General, check if the name of a variable, method, class truly covers the subject. </td>
-                  
-                  </tr>
-				  
-				  
-				  
-				   </tr>
-                  <tr class="success">
-                    <td></td>
-                    <td>File name</td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>The source file name consists of the case-sensitive name of the top-level class it contains plus the  .java extension. </td>
-                  
-                  </tr>
-				  
-				  
-				   </tr>
-                  <tr class="success">
-                    <td></td>
-                    <td>Package Name</td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>Package names should be in all lower cases that start with reversed Internet domain name followed  by application name. For example, org/companyname/appname </td>
-                  
-                  </tr>
-				  
-				  
-				  
-				  
-				  
-				  
-				     </tr>
-                  <tr class="success">
-                    <td></td>
-                    <td>Class names </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>Upper camel case should be used for the class names. Class name should be a noun. Try to make the  name simple and descriptive. 
-LoginTest.java : All the tests shall have suffix Test 
-LoginPage.java : All the pages shall have suffix Page 
-TestBase.java : Class to include all common methods to be used by tests and pages </td>
-                  
-                  </tr>
-				  
-				  
-				     </tr>
-                  <tr class="success">
-                    <td></td>
-                    <td>Method names </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>Lower camel case should be used for the method names. Method name should be a verb. Try to  make the name simple and descriptive. Use whole word instead of abbreviations. 
-initialiseBrowsers() 
-initialiseProperties() 
-waitForTextToBePresent(WebElement webElement, String textToBeVerified) testLoginwithValidCredentials() :All test methods shall start with prefix test 
-</td>
-                  
-                  </tr>
-				  
-				     </tr>
-                  <tr class="success">
-                    <td></td>
-                    <td>Variable names </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>Lower camel case should be used for the variable names. Intent of the variable shall be indicated  with the given name. The variable name should be a noun. Try to make the name simple and  descriptive. Try to avoid abbreviations, prefer domainCode over dmnCd
-					
-					webDriver  
-intEmployeeCount 
-
-
-					</td>
-                  
-                  </tr>
-				  
-				     </tr>
-                  <tr class="success">
-                    <td></td>
-                    <td>Constants </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>All letters should be in uppercase. Words shall be separated with underscore _ . Create a constant file for static values that are needed at multiple places 
-Use Database-driven values for dynamic values 
-Use ENUMs for a group of constants 
-BASE_URL 
-All the global constants shall be defined in a property file and loaded into the constants defined in  Constant class. 
-Constants shall be defined as public static in the Constant class 
-public static String BASE_URL; 
-</td>
-                  
-                  </tr>
-				  
-				     </tr>
-                  <tr class="success">
-                    <td></td>
-                    <td>Programming guidelines </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>∙ Optimize Imports 
-Always optimize imports in the Java class. 
-</td>
-                  
-                  </tr>
-				  
-				  
-				   </tr>
-                  <tr class="success">
-                    <td></td>
-                    <td>∙ Null Checks 
-</td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>As a general practice, always do a null check on a variable before any operation. </td>
-					
-					
-					
-				   </tr>
-                  <tr class="success">
-                    <td></td>
-                    <td>Exception Handling </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>The try-catch block should be used for exception handling with proper logging in the catch  block. Also, make sure to close the resources properly in the finally block. 
-</td>
-				  
-				   </tr>
-                  <tr class="success">
-                    <td></td>
-                    <td>Code Indentation and Formatting </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>For a cleaner and readable code, use code indentation thoroughly (with Tab or Spaces).  Each time a new block or block-like construct is opened, the indent increases by two spaces.  When the block ends, the indent returns to the previous indent level. The indent level  applies to both code and comments throughout the block. It can be done automatically with  the built-in editor of the IDE. For instance, use Ctrl-Shift-F in Eclipse. </td>
-                  
-                  </tr>
-				  
-				    </tr>
-                  <tr class="success">
-                    <td></td>
-                    <td>Programming guidelines </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>data</td>
-                  
-                  </tr>
-				  
-				  
-				   </tr>
-                  <tr class="success">
-                    <td></td>
-                    <td>Not All One-Liners </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>It's good to keep the code clean and readable. So, it's a better idea to not always go with  one-liners. Especially, when we initialize and operate the variable in one line.
-					For example, write: 
-out.write(attrs.get("offset") + "-" + Math.min(attrs.get("count"), attrs.get("offset") +  attrs.get("max")) + " " + title + " " + attrs.get("count")); 
-as: 
-int start = attrs.get("offset") 
-int total = attrs.get("count")) 
-int end = Math.min(total, start + attrs.get("max")) 
-out.write(start + "-" + end + " " + title + " " + total) 
-
-					
-					</td>
-					
-					
-					
-				   </tr>
-                  <tr class="success">
-                    <td></td>
-                    <td>White-Spaces</td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>Use white-spaces to separate combined statements to make code more readable. For example, write: 
-Integer.valueOf(params.offset?params.offset:attrs.offset) 
-as: 
-Integer.valueOf(params.offset ? params.offset : attrs.offset) 
-</td>
-				  
-				   </tr>
-				   
-				   
-				   
-				    <tr class="success">
-                    <td></td>
-                    <td>Curly Braces </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>Use curly braces for one-liners also. Braces to be used with if, else, for, do and while statements,  even when the body is empty or contains only a single statement. 
-</td>
-                  
-                  </tr>
-				  
-				  
-				   <tr class="success">
-                    <td></td>
-                    <td>One statement per line  </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>Each statement is followed by a line break. 
-</td>
-                  
-                  </tr>
-				  
-				  <tr class="success">
-                    <td></td>
-                    <td>∙ Line-wrapping  </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>When code that might otherwise legally occupy a single line is divided into multiple lines, this  activity is called line-wrapping. Very often there are several valid ways to line-wrap the same  piece of code. While the typical reason for line-wrapping is to avoid overflowing the column  limit, even code that would in fact fit within the column limit may be line-wrapped as required.  Extracting a method or local variable may solve the problem without the need to line-wrap. </td>
-                  
-                  </tr>
-				  
-				  <tr class="success">
-                    <td></td>
-                    <td>Variable declarations  </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>One variable per declaration. Every variable declaration (field or local) declares only one  variable: declarations such as int a, b; are not used.  
-Exception: Multiple variable declarations are acceptable in the header of a for loop
-</td>
-                  
-                  </tr>
-				  
-				  
-				  <tr class="success">
-                    <td></td>
-                    <td>Declared when needed</td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>Local variables are not habitually declared at the start of their containing block or block-like  construct. Instead, local variables are declared close to the point they are first used (within  reason), to minimize their scope. Local variable declarations typically have initializers, or are  initialized immediately after declaration. 
-</td>
-                  
-                  </tr>
-				  
-				  <tr class="success">
-                    <td></td>
-                    <td>No C-style array declarations </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>The square brackets form a part of the type, not the variable: String[] args, not String args[].</td>
-                  
-                  </tr>
-				  
-				  <tr class="success">
-                    <td></td>
-                    <td>StringBuilder or StringBuffer in Place of String</td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>When performing a lot of operations on the String, use StringBuilder or StringBuffer 
-For example, Java creates a new String object for every concatenation operation. In this case, a  better idea is to use a StringBuffer. 
-Use equals over == 
-equals perform the actual comparison of two strings, whereas == compares object references. ∙ switch-case Over Multiple if-else 
-It's a good practice to use switch-case in place of multiple if-else conditions. It optimizes the  code execution and also makes code cleaner and more readable. 
-</td>
-                  
-                  </tr>
-				  
-				  <tr class="success">
-                    <td></td>
-                    <td>Objects Creation in a Loop </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>It is usually better to create the object inside the loop (If object is not required outside loop).  Java optimizes memory usage for short-lived objects. 
-For example, write: 
-Person person; 
-for(int i=0;i<namesList.size();i++) { 
- person = new Person(); 
- person.setName(namesList.get(i)); 
- person.display(); 
-} 
-as: 
-for(int i=0;i<namesList.size();i++) { 
- Person person = new Person(); 
- person.setName(namesList.get(i)); 
- person.display(); 
-}
-pg. 6 
-Voot Test Automation – Coding Guidelines 
-Also, create a new object only if required. 
-For example, write: 
-ArrayList<Person> personList = new ArrayList<Person>(); 
-for(int i=0;i<namesList.size();i++) { 
- Person person = new Person(); 
- if(null != namesList.get(i)) { 
- person.setName(namesList.get(i)); 
- personList.add(person); 
- } 
-} 
-as: 
-ArrayList<Person> personList = new ArrayList<Person>(); 
-for(int i=0;i<namesList.size();i++) { 
- if(null != namesList.get(i)) { 
- Person person = new Person(); 
- person.setName(namesList.get(i)); 
- personList.add(person); 
- } 
-} 
-</td>
-                  
-                  </tr>
-				  
-				  
-				  
-                  <tr class="success">
-                    <td></td>
-                    <td>Follow Page Object Designer Pattern </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>Page Objects should never make verification or assertions, but there is a single verification which can  and should be within the page object. This verification mission is to verify the page, if critical  elements on the page were loaded correctly, a good way to do so is checking it in the constructor of  the page object. A page object does not necessarily need to represent an entire page, it could be  used to represent components on a page. </td>
-                  
-                  </tr>
-				  
-				  
-				   <tr class="success">
-                    <td></td>
-                    <td>Waits </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>Usage of Implicit Waits, Explicit Waits and Sleeps should be optimal in the project. For example a 10  seconds wait at 12 places in a class, across 60 different classes can add 2 hours to the execution  time. </td>
-                  
-                  </tr>
-				  
-				  <tr class="success">
-                    <td></td>
-                    <td>Locators Strategy</td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>While Xpath is convenient to find any element in the DOM, it is considered as least preferred  approach with respect to performance. In iOS platform, Xpath should be avoided to the extent  possible. 
-Refer to below documents for guidelines. 
-http://appium.io/docs/en/commands/element/find-elements/index.html#selector-strategies https://appiumpro.com/editions/60-how-to-pick-the-right-locator-strategy 
-https://appiumpro.com/editions/8-how-to-find-elements-in-ios-not-by-xpath </td>
-                  
-                  </tr>
-				  
-				  <tr class="success">
-                    <td></td>
-                    <td>Comments </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>Comments shall be used to explain the code to make the test scripts more readable for others.  Always put comments defining the purpose. 
-Use consistent commenting styles. 
-Block comment style 
-Block comments are indented at the same level as the surrounding code. They may be in /* ... */  style or // ... style. For multi-line /* ... */ comments, subsequent lines must start with * aligned with  the * on the previous line. 
-/* 
-* This is // And so /* Or you can 
-* okay. // is this. * even do this. */ 
-*/
-
-
-
-Comments are not enclosed in boxes drawn with asterisks or other characters. 
-When writing multi-line comments, use the /* ... */ style if you want automatic code formatters to re wrap the lines when necessary (paragraph-style). Most formatters don't re-wrap lines in // ... style  comment blocks. 
-For example, Javadoc on a class: 
-/** 
-* General convenience tags for layout - header, body and footer 
-* @author – Name 
-* @dateCreated - Date 
-*/ 
-class LayoutTagLib { 
-} 
-Javadoc on a method: 
-/**
-pg. 8 
-Voot Test Automation – Coding Guidelines 
-* Gets the user for specified code and role. 
-* @param code :- The code, either username or email address 
-* @param role :- The role identification e.g. A, B or C. Default is A. 
-* @return the user or null if not found 
-*/ 
-User findUser(String code, String role = "A") 
-Make sure the code is self-explanatory and comments are really useful in very specific cases. 
-</td>
-                  
-                  </tr>
-				  
-				  
-				  <tr class="success">
-                    <td></td>
-                    <td>TestNG Annotations</td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>Structure the Test methods for flexible suite run options by using annotations with required tags like @Test, @enabled=true, @groupname, @priority etc as decided by the project. 
-Ensure @Before and @After methods are consistently followed at Suite Level, Class Level and  Method Level 
-</td>
-                  
-                  </tr>
-				  
-				  <tr class="success">
-                    <td></td>
-                    <td>Code Clean Up</td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>Remove console print Statements (SOPs), use logging instead (never log personal information) Remove obsolete comments 
-Use the @deprecated annotation on the method/variable, if it is not meant for future use or going  to be removed 
-Remove hardcoded variable values 
-</td>
-                  
-                  </tr>
-				  
-				  <tr class="success">
-                    <td></td>
-                    <td>Business Logic and reusability  </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>Avoid redundant code by using reusable components like utilities and service methods. 
-</td>
-                  
-                  </tr>
-				  
-				  <tr class="success">
-                    <td></td>
-                    <td>Code Commit  </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>Group the files and commit together for a logical set of changes. 
-Don't commit the code which has the actual Password. Make sure to use a system/configuration  variable to replace the password 
-Commit messages should contain the task information. For example, JIRA issue number, a  meaningful comment on code implementation 
-Commit .class files (from the build, out, target directories), only if required 
-</td>
-                  
-                  </tr>
-				  
-				   <tr class="success">
-                    <td></td>
-                    <td>Code Review and Comments.  </td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td>Source code maintained at GitHub as private repository. To ensure that, comments are added for  the code change that is being pushed. Comments are required for Reviewers to understand the  purpose of change. 
-Discuss with leads for any change in common Utilities Classes. Requires approval from leads to push  any changes in Utilities. 
-Before start of the day, to take the latest code from GitHub. Need to Merge the Code as soon as  possible after getting approvals else it might result in conflicts. 
-pg. 9 
-Voot Test Automation – Coding Guidelines 
-Always save all files before pushing the code. Don’t push the Constant file and those changes that are local to developers system. 
-Don’t push the code, even if there is a single error in the project. 
-In case of conflicts, resolve and create a pull request again. 
-</td>
-                  
-                  </tr>
-				  
-				   <tr class="success">
-                    <td></td>
-                    <td>Technical Lead or Module Leads approving pull requests,</td>
-               
-			    
-			     
-                  </tr>
-                  <tr class="active">
-                    <td></td>
-                    <td> to ensure coding guidelines are followed.  Reviewers to record any observation and gaps to the coding guidelines and to get it reworked from  developers, before approving pull request and merging the change set. 
-Keep It Simple! Maintain simplicity and readability of code. 
-Reference is available at https://google.github.io/styleguide/javaguide.html</td>
-                  
-                  </tr>
-				  
-				  
-				  
-				  
-                </tbody>
-              </table>
+              
+			  <table cellspacing="0" border="0">
+	<colgroup width="68"></colgroup>
+	<colgroup width="190"></colgroup>
+	<colgroup width="782"></colgroup>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#F4CCCC"><font face="Lora">SLNO</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#F4CCCC"><font face="Lora">CATAGORY</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F4CCCC"><font face="Lora">GUIDELINES</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3" sdval="1" sdnum="1033;"><font face="Lora">1</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora">Overview  </font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora">Coding Guidelines to be followed for development of software and following sections describe the  approach to be followed for Java Projects in general and specific to Test Automation.<br>It helps readability of the code to understand the functionality and logic, it helps get consistency  across projects in reviewing the code and most importantly it helps to maintain and do rework easily. <br>This document shall be used as reference for Voot Test Automation while programming and as  checklist for code review process.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3" sdval="2" sdnum="1033;"><font face="Lora">2</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora">Naming conventions  </font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000">Package Name</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Package names should be in all lower cases that start with reversed Internet domain name followed by application name. For example: org/companyname/appname</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000">Class names</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Upper camel case should be used for the class names. Try to make the name simple and descriptive.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">LoginTest.java : All the tests shall have suffix Test</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" color="#000000"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">LoginPage.java : All the pages shall have suffix Page</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">BaseTest.java : Class to include all common methods to be used by tests and pages</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">BasePage.java : Class to include all common methods to be used by tests and pages</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000">Method names</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Lower camel case should be used for the method names. Try to make the name simple and descriptive. Use whole word instead of abbreviations.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#A20000">initialiseBrowsers()</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#A20000">initialiseProperties()</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" color="#000000"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#A20000">waitForTextToBePresent(WebElement webElement, String textToBeVerified)</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000">Variable names</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora">Lower camel case should be used for the variable names. Intent of the variable shall be indicated with the given name. The variable name should be a noun. Try to make the name simple and descriptive. Try to avoid abbreviations, prefer domainCode over dmnCd</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" color="#A20000"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#A20000">webDriver</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#A20000">intEmployeeCount</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000">Constants</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">All letters should be in UPPER_CASE. Words shall be separated with underscore _ . Create a constant file for static values that are needed at multiple places</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Use Database-driven values for dynamic values</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Use ENUMs for a group of constants</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#A20000">BASE_URL</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">All the global variables and Constants shall be defined in respective class files and loaded into the constants defined in Constant class.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Constants shall be defined as public static in the Constant class</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#A20000">public static String BASE_URL;</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3" sdval="3" sdnum="1033;"><font face="Lora">3</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora">Programming guidelines</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000">Optimize Imports</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Remove unused imports before pushing the code.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000">Null Checks</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" size=3 color="#000000">As a general practice, always do a null check on a variable before any operation. &#8729; Exception Handling</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">The try-catch block should be used for exception handling with proper logging in the catch block. Also, make sure to close the resources properly in the finally block.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000">Code Indentation and Formatting - Code Review</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Always format your class before creating a PR for an easy Review Process.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">It can be done automatically with the built-in editor of the IDE. For instance, use Ctrl-Shift-F in Eclipse.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000">Not All One-Liners</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">It's good to keep the code clean and readable. So, it's a better idea to not always go with one-liners. Especially, when we initialize and operate the variable in one line.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">For example, write:</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#A20000">out.write(attrs.get(&quot;offset&quot;) + &quot;-&quot; + Math.min(attrs.get(&quot;count&quot;), attrs.get(&quot;offset&quot;) + attrs.get(&quot;max&quot;)) + &quot; &quot; + title + &quot; &quot; + attrs.get(&quot;count&quot;));</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">as:</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#A20000">int start = attrs.get(&quot;offset&quot;)</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#A20000">int total = attrs.get(&quot;count&quot;))</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#A20000">int end = Math.min(total, start + attrs.get(&quot;max&quot;))</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#A20000">out.write(start + &quot;-&quot; + end + &quot; &quot; + title + &quot; &quot; + total)</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000">&#8729; White-Spaces</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Use white-spaces to separate combined statements to make code more readable. For example, write:</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#A20000">Integer.valueOf(params.offset?params.offset:attrs.offset)</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">as:</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#A20000">Integer.valueOf(params.offset ? params.offset : attrs.offset)</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000">&#8729; Curly Braces in If Loops:</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Use curly braces for one-liners also. Braces to be used with if, else, for, do and while statements, even when the body is empty or contains only a single statement.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000">&#8729; One statement per line</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Each statement is followed by a line break.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000">&#8729; Variable declarations</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" size=3 color="#000000">In For Loop, loop variables should not be a single letter like i, or j. It should be a noun.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000">&#8729; StringBuilder or StringBuffer in Place of String</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">When performing a lot of operations on the String, use StringBuilder or StringBuffer</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">For example, Java creates a new String object for every concatenation operation. In this case, a better idea is to use a StringBuffer.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Use equals over ==</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" size=3 color="#000000">equals perform the actual comparison of two strings, whereas == compares object references. &#8729;</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000">switch-case Over Multiple if-else</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">It's a good practice to use switch-case in place of multiple if-else conditions. It optimizes the code execution and also makes code cleaner and more readable.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000">&#8729; Objects Creation in a Loop</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">It is usually better to create the object inside the loop (If object is not required outside loop). Java optimizes memory usage for short-lived objects.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" color="#000000">For example, write:</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora">Person person;<br>for(int i=0;i&lt;namesList.size();i++) {<br>person = new Person();<br>person.setName(namesList.get(i));<br>person.display();<br>}</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" color="#000000">as:</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora">for(int i=0;i&lt;namesList.size();i++) {<br>Person person = new Person();<br>person.setName(namesList.get(i));<br>person.display();<br>}</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Also, create a new object only if required.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" color="#000000">For example, write:</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">ArrayList&lt;Person&gt; personList = new ArrayList&lt;Person&gt;();<br>for(int i=0;i&lt;namesList.size();i++) {<br>Person person = new Person();<br>if(null != namesList.get(i)) {<br>person.setName(namesList.get(i));<br>personList.add(person);<br>}<br>}</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" color="#000000">as:</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">ArrayList&lt;Person&gt; personList = new ArrayList&lt;Person&gt;();<br>for(int i=0;i&lt;namesList.size();i++) {<br>if(null != namesList.get(i)) {<br>Person person = new Person();<br>person.setName(namesList.get(i));<br>personList.add(person);<br>}<br>}</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3" sdval="4" sdnum="1033;"><font face="Lora">4</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora">Test Automation Best Practices  <br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000">Follow Page Object Design Pattern</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Page Objects should never make verification or assertions, but there is a single verification which can and should be within the page object.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000">Waits</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Usage of Implicit Waits, Explicit Waits and Sleeps should be optimal in the project. For example a 10 seconds wait at 12 places in a class, across 60 different classes can add 2 hours to the execution time.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" size=3 color="#000000">Locators Strategy</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">While Xpath is convenient to find any element in the DOM, it is considered as least preferred approach with respect to performance. In iOS platform, Xpath should be avoided to the extent possible.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3" sdval="5" sdnum="1033;"><font face="Lora">5</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora">Comments </font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Author Name is Mandatory to Mention in Each class like</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">// Author:</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">//Last Modified by:</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Each Method should have a description in comments. Mandatory.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Comments shall be used to explain the code to make the test scripts more readable for others. Always put comments defining the purpose.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Use consistent commenting styles.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" color="#000000">Block comment style</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Block comments are indented at the same level as the surrounding code. They may be in /* ... */ style or // ... style. For multi-line /* ... */ comments, subsequent lines must start with * aligned with the * on the previous line.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#880000">/* <br>* This is // And so /* Or you can <br>* okay. // is this. * even do this. */ <br>*/</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#222222">Comments are not enclosed in boxes drawn with asterisks or other characters.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#222222">When writing multi-line comments, use the /* ... */ style if you want automatic code formatters to re wrap the lines when necessary (paragraph-style). Most formatters don't re-wrap lines in // ... style  comment blocks.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" color="#000000">For example, Javadoc on a class:</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">/**<br>* General convenience tags for layout - header, body and footer<br>* @author &ndash; Name<br>* @dateCreated - Date<br>*/<br>class LayoutTagLib {<br><br>}</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" color="#000000">Javadoc on a method:</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">/**<br>* Gets the user for specified code and role.<br>* @param code :- The code, either username or email address<br>* @param role :- The role identification e.g. A, B or C. Default is A.<br>* @return the user or null if not found<br>*/<br>User findUser(String code, String role = &quot;A&quot;)</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Make sure the code is self-explanatory and comments are really useful in very specific cases.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3" sdval="6" sdnum="1033;"><font face="Lora">6</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora">TestNG Annotations  <br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Structure the Test methods for flexible suite run options by using annotations with required tags like @Test, @enabled=true, @groups, @priority etc as decided by the project.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Ensure @Before and @After methods are consistently followed at Suite Level, Class Level and Method Level</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3" sdval="7" sdnum="1033;"><font face="Lora">7</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora">Code Clean Up  <br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Remove console print Statements (SOPs), use logging instead (never log personal information) Remove obsolete comments</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Use the @deprecated annotation on the method/variable, if it is not meant for future use or going to be removed</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Remove hardcoded variable values</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3" sdval="8" sdnum="1033;"><font face="Lora">8</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora">Business Logic and reusability  <br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora">Avoid redundant code by using reusable components like utilities and Event Utils methods. <br></font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3" sdval="9" sdnum="1033;"><font face="Lora">9</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora">Code Commit  <br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Group the files and commit together for a logical set of changes. Never miss any change that is dependent for other classes, else others will get errors in their project.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Commit messages should contain the task information. For example, JIRA issue number, a meaningful comment on code implementation</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3" sdval="10" sdnum="1033;"><font face="Lora">10</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora">Code Review and Comments.  <br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Source code maintained at GitHub as a private repository. To ensure that, comments are added for the code change that is being pushed. Comments are required for Reviewers to understand the purpose of change.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Discuss with leads for any change in common Utilities Classes. Requires approval from leads to push any changes in Utilities.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Before start of the day, to take the latest code from GitHub. Need to Merge the Code as soon as possible after getting approvals else it might result in conflicts.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Always save all files before pushing the code. Don&rsquo;t push the Constant file and those changes that are local to developers system.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Don&rsquo;t push the code, even if there is a single error in the project.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">In case of conflicts, resolve and create a pull request again.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Technical Lead or Module Leads approving pull requests, to ensure coding guidelines are followed. Reviewers to record any observation and gaps to the coding guidelines and to get it reworked from developers, before approving pull request and merging the change set.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle bgcolor="#D0E0E3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><font face="Lora" color="#000000">Keep It Simple! Maintain simplicity and readability of code.</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=4 height="84" align="right" valign=middle bgcolor="#D0E0E3" sdval="11" sdnum="1033;"><font face="Lora">11</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" rowspan=4 align="right" valign=middle bgcolor="#D9EAD3"><font face="Lora" color="#000000">Refer to below documents for guidelines.</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><u><font face="Lora" color="#0000FF"><a href="https://google.github.io/styleguide/javaguide.html">https://google.github.io/styleguide/javaguide.html</a></font></u></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><u><font face="Lora" color="#0000FF"><a href="http://appium.io/docs/en/commands/element/find-elements/index.html#selector-strategies">http://appium.io/docs/en/commands/element/find-elements/index.html#selector-strategies </a></font></u></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><u><font face="Lora" color="#0000FF"><a href="https://appiumpro.com/editions/8-how-to-find-elements-in-ios-not-by-xpath">https://appiumpro.com/editions/8-how-to-find-elements-in-ios-not-by-xpath</a></font></u></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top bgcolor="#F3F3F3"><u><font face="Lora" color="#0000FF"><a href="https://appiumpro.com/editions/60-how-to-pick-the-right-locator-strategy">https://appiumpro.com/editions/60-how-to-pick-the-right-locator-strategy</a></font></u></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top><font face="Lora"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top><font face="Lora"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top><font face="Lora"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top><font face="Lora"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top><font face="Lora"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top><font face="Lora"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top><font face="Lora"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=middle><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="right" valign=middle><font face="Lora"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=top><font face="Lora"><br></font></td>
+	</tr>
+</table>
+			  
+			  
+			  
+			  
+			  
+			  
             </section>
           </div>
         <!-- page end-->
