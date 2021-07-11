@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="../img/favicon.png">
 
-  <title>BLANK | Automation Wiki</title>
+  <title>Android | Automation Wiki</title>
 
   <!-- Bootstrap CSS -->
   <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -188,15 +188,68 @@
       <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa fa-bars"></i>BLANK</h3>
+            <h3 class="page-header"><i class="fa fa fa-bars"></i>Android</h3>
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="../index.html">Home</a></li>
-              <li><i class="icon_documents_alt"></i>BLANK</li>
+              <li><i class="icon_documents_alt"></i>Android</li>
             </ol>
           </div>
         </div>
         <!-- page start-->
-        Page content goes here
+       <table cellspacing="0" border="0">
+	<colgroup width="574"></colgroup>
+	<tr>
+		<td height="21" align="left" valign=bottom bgcolor="#F4CCCC"><font face="Cambria">Sample Android Desired Capabilities</font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria">{<br>  &quot;deviceVersion&quot;: &quot;7.1.1&quot;,<br>  &quot;automationName&quot;: &quot;Appium&quot;,<br>  &quot;deviceName&quot;: &quot;Moto Gplus&quot;,<br>  &quot;platformName&quot;: &quot;Android&quot;,<br>  &quot;udid&quot;: &quot;MCCDU17207000772&quot;,<br>  &quot;appPackage&quot;: &quot;com.xx.xxx.xxxxx&quot;,<br>  &quot;appActivity&quot;: &quot;com.xx.xxx.xxxxx.xxxx.xxxxxxxx.xxxxxxxxxxxxxxxx&quot;,<br>  &quot;noReset&quot;: &quot;true&quot;<br>}</font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom bgcolor="#F4CCCC"><b><font face="Cambria">How to Record logs of Android using logcat?</font></b></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria">Run the following command &quot;Adb logcat -v threadtime &gt;logcat.txt&quot; and reproduce the issue</font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom bgcolor="#F4CCCC"><b><font face="Cambria">ADB command to find the list of package name on the device that is connected?</font></b></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria">adb shell cmd package list packages<br></font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom bgcolor="#F4CCCC"><b><font face="Cambria">How to Install an apk file using Android ADB Commands</font></b></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria">adb -s &quot;&lt;deviceIDfromlist&gt;&quot; install &quot;&lt;path-to-apk&gt;&quot;</font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font face="Cambria">adb shell dumpsys window windows | grep -E 'mCurrentFocus'</font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font face="Cambria">adb shell dumpsys window | find &quot;mCurrentFocus&quot;</font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom><font color="#000000"><br></font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom bgcolor="#F4CCCC"><font face="Cambria">The following is a partial list of some commonly used Android KeyCodes:</font></td>
+	</tr>
+	<tr>
+		<td height="21" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria">a' - 'z' --&gt; 29 - 54<br>'0' - '9'--&gt; 7 - 16<br>SPACE --&gt; 62<br>ENTER ---&gt; 66<br>BACKSPACE --&gt; 67<br>BACK --&gt; 4<br>CALL --&gt; 5<br>ENDCALL --&gt; 6</font></td>
+	</tr>
+</table>
         <!-- page end-->
       </section>
     </section>
