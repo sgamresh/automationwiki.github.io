@@ -196,7 +196,66 @@
           </div>
         </div>
         <!-- page start-->
-        Page content goes here
+       <table cellspacing="0" border="0">
+	<colgroup width="63"></colgroup>
+	<colgroup width="805"></colgroup>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=bottom bgcolor="#F4CCCC" sdval="1" sdnum="1033;"><b><font face="Cambria">1</font></b></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom bgcolor="#F4CCCC"><b><font face="Cambria">VLOOKUP along with IMPORTRANGE</font></b></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria">Syntax</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria">&quot;=VLOOKUP(&lt;destinationCellid&gt;,IMPORTRANGE(&quot;&lt;sourceSheetId&gt;&quot;,&quot;&lt;sourceSheetName&gt;!&lt;ColumnIdOfWantedSourceSheet&gt;:&lt;sourceColumnIdRange&gt;&quot;),&lt;IndexOfWantedColumn&gt;,0)&quot;</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria">Example</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria">&quot;=VLOOKUP(A2,IMPORTRANGE(&quot;1B9UIvIE2wjBWtxwWowVmcvPF72hocCXh27aqD3hrP0I&quot;,&quot;Web Regression!B:I&quot;),8,0)&quot;</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=bottom bgcolor="#F4CCCC" sdval="2" sdnum="1033;"><b><font face="Cambria">2</font></b></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom bgcolor="#F4CCCC"><b><font face="Cambria">COUNTIF</font></b></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria">Syntax</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria">&quot;=COUNTIF('Copy of TCD'!O:O,&quot;Done&quot;)+COUNTIF('Copy of TCD'!O:O,&quot;Yes&quot;)+COUNTIF('Copy of TCD'!O:O,&quot;Done (Partially)&quot;)&quot;</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria">&quot;=COUNTIF('Copy of TCD'!O:O,&quot;Yes&quot;)+COUNTIF('Copy of TCD'!O:O,&quot;Yes&quot;)+COUNTIF('Copy of TCD'!O:O,&quot;Yes (Partially)&quot;)&quot;</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria">&quot;=COUNTIF('Copy of TCD'!P:P,&quot;Done&quot;)+COUNTIF('Copy of TCD'!P:P,&quot;Yes&quot;)+COUNTIF('Copy of TCD'!P:P,&quot;Done (Partially)&quot;)&quot;</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria">&quot;=COUNTIF('Copy of TCD'!P:P,&quot;Yes&quot;)+COUNTIF('Copy of TCD'!O:O,&quot;Yes&quot;)+COUNTIF('Copy of TCD'!O:O,&quot;Yes (Partially)&quot;)&quot;</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="right" valign=bottom bgcolor="#F4CCCC" sdval="3" sdnum="1033;"><b><font face="Cambria">3</font></b></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom bgcolor="#F4CCCC"><b><font face="Cambria">COUNTIFS</font></b></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria">Syntax</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria"><br></font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria">&quot;=COUNTIFS(AppRegTCs!H:H,&quot;No&quot;,AppRegTCs!B:B,B3)&quot;</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria">&quot;=COUNTIFS(AppSVOD!A:A,&quot;&lt;&gt;&quot;,AppSVOD!A:A,B3)&quot;</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="21" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria"><br></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=bottom bgcolor="#D9EAD3"><font face="Cambria">&quot;=COUNTIFS('Copy of Web Regression'!I:I,&quot;&lt;&gt;&quot;,'Copy of Web Regression'!A:A,A3)&quot;</font></td>
+	</tr>
+</table>
         <!-- page end-->
       </section>
     </section>
